@@ -3,19 +3,21 @@
 angular.module('logistaApp')
   .config(function ($stateProvider) {
     $stateProvider
-      .state('koormus', {
-        url: '/koormus',
-        data: {pageTitle: 'Koormus'},
+      .state('my_trucks', {
+        url: '/my_trucks',
+        data: {pageTitle: 'My trucks'},
         views: {
           'main': {
             templateUrl: 'app/main/main.html',
             controller: 'MainCtrl'
           }
           ,
-          'content@koormus': {
-            templateUrl: 'app/work/koormus.html',
-            controller: 'EhitusCtrl'
+          'content@my_trucks': {
+            templateUrl: 'app/my_trucks/my_trucks.html',
+            controller: 'MyTrucksCtrl'
           }
         }
+        //,
+        //authenticate: true
       });
   });

@@ -36,12 +36,6 @@ angular.module('logistaApp')
             templateUrl: 'app/account/settings/settings.html',
             controller: 'SettingsCtrl'
           }
-          //,
-          //'content@transport': {
-          //  templateUrl: 'app/transport/transport.html',
-          //  controller: 'FXCtrl'
-          //}
-
         },
         authenticate: true
       });

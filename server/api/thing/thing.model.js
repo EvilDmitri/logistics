@@ -4,6 +4,7 @@ var mongoose = require('mongoose'),
   Schema = mongoose.Schema;
 
 var ThingSchema = new Schema({
+  owner: String,
   name: String,
   type: String,
   endurance: String,

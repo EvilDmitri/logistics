@@ -1,7 +1,18 @@
 'use strict';
 
 angular.module('logistaApp')
-  .controller('CreateCtrl', function ($scope, $http) {
+  .controller('CreateCtrl', function ($scope, $http, Auth) {
+
+    $scope.isLoggedIn = Auth.isLoggedIn;
+    if (!$scope.isLoggedIn()){
+
+      $location.path('/login');
+    }
+    $scope.getCurrentUser = Auth.getCurrentUser;
+
+    var user = Auth.getCurrentUser();
+    console.log(user);
+
     $scope.bodies = [
       {id:1, name:'Kaubik'},
       {id:2, name:'Veoauto'}
@@ -12,6 +23,7 @@ angular.module('logistaApp')
         return;
       }
       $http.post('/api/things', {
+        owner: user._id,
         name: $scope.thing.name,
         type: $scope.thing.price,
         endurance: $scope.thing.endurance,
