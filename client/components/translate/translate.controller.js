@@ -13,7 +13,8 @@ app.config(function ($translateProvider) {
     LOOK: 'See',
     BUTTON_TEXT_EN: 'eng',
     BUTTON_TEXT_RU: 'rus',
-    BUTTON_TEXT_EE: 'est'
+    BUTTON_TEXT_EE: 'est',
+    'MY_TRUCKS': 'Here are Your trucks'
   })
     .translations('ee', {
       ALL: 'Kõik',
@@ -25,7 +26,8 @@ app.config(function ($translateProvider) {
       LOOK: 'Vaata',
       BUTTON_TEXT_EN: 'eng',
       BUTTON_TEXT_RU: 'rus',
-      BUTTON_TEXT_EE: 'est'
+      BUTTON_TEXT_EE: 'est',
+      'MY_TRUCKS': 'See on Teie veod'
     })
   .translations('ru', {
       ALL: 'Все',
@@ -37,7 +39,8 @@ app.config(function ($translateProvider) {
       LOOK: 'Смотри',
       BUTTON_TEXT_EN: 'eng',
       BUTTON_TEXT_RU: 'rus',
-      BUTTON_TEXT_EE: 'est'
+      BUTTON_TEXT_EE: 'est',
+      'MY_TRUCKS': 'Это Ваши маршруты'
     });
   $translateProvider.preferredLanguage('ee');
 

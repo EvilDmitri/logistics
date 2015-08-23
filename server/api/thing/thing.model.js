@@ -13,6 +13,7 @@ var ThingSchema = new Schema({
   source_address: Object,
   dest_address: Object,
   position: Object,
+  viewed: Number,
   active: Boolean
 });
 

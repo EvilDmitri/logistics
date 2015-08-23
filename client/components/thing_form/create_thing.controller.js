@@ -31,7 +31,8 @@ angular.module('logistaApp')
         info: $scope.thing.info,
         source_address: $scope.thing.source_address,
         dest_address: $scope.thing.dest_address,
-        position: $scope.thing.position
+        position: $scope.thing.position,
+        viewed: 0
       });
       $scope.thing = '';
     }

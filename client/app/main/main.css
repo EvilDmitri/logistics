@@ -125,6 +125,22 @@ a {
 
 }
 
+.logo {
+  float: left;
+  margin-top:12px;
+}
+.logo h1 {
+  font-size: 3em;
+  margin: 0em;
+  line-height:30px;
+  font-family: 'Timmana', sans-serif;
+}
+.logo h1 a{
+  color: #2dcc70;
+  text-decoration: none;
+  display: block;
+}
+
 /*--header end here--*/
 /*--banner start here--*/
 .banner {

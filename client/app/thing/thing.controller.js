@@ -10,7 +10,7 @@ angular.module('logistaApp')
     $scope.thing = [];
     $http.get('/api/things/'+$scope.id).success(function(awesomeThing) {
       $scope.thing = awesomeThing;
-      console.log(awesomeThing);
+      //console.log(awesomeThing);
       addMarker(awesomeThing);
 
     });
@@ -20,6 +20,13 @@ angular.module('logistaApp')
     $scope.deleteThing = function(id) {
       $http.delete('/api/things/' + id);
       $location.url('/');
+    };
+
+     // Update viewed field
+    $scope.updateThing = function(id) {
+      $scope.thing.viewed += 1;
+      $http.patch('/api/things/' + id, $scope.thing);
+      //$location.url('/');
     };
 
     var source_image = {
